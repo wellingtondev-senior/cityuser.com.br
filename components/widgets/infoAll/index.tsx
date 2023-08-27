@@ -41,8 +41,12 @@ const Infoall = ({ data }: any) => {
         setIsVermelho(vermelhorray.length)
         setIsRoxo(roxorray.length)
     }
-
-
+    
+    const formatNumber = (number:number)=>{
+    const numeroFormatado = number.toFixed(1);
+    return numeroFormatado
+    }
+    
 
 
 
@@ -79,7 +83,7 @@ const Infoall = ({ data }: any) => {
                                     Nivel de 0cm a 19cm
                                 </p>
                                 <p>
-                                    {`${isVerde / isTotalDispositivo * 100 + "%"}`}
+                                    {`${formatNumber(isVerde / isTotalDispositivo * 100) + "%"}`}
                                 </p>
                             </div>
                             <div className="w-full h-2 mb-4 bg-green-100 rounded-full">
@@ -92,7 +96,7 @@ const Infoall = ({ data }: any) => {
                                     Nivel de 20cm a a 49cm
                                 </p>
                                 <p>
-                                {`${isAmarelo/ isTotalDispositivo * 100 + "%"}`}
+                                {`${formatNumber(isAmarelo/ isTotalDispositivo * 100 )+ "%"}`}
                                 </p>
                             </div>
                             <div className="w-full h-2 mb-4 bg-yellow-100 rounded-full">
@@ -104,7 +108,7 @@ const Infoall = ({ data }: any) => {
                                     Nivel de 50cm a 79cm
                                 </p>
                                 <p>
-                                {`${isLaranja / isTotalDispositivo * 100 + "%"}`}
+                                {`${formatNumber(isLaranja / isTotalDispositivo * 100) + "%"}`}
                                 </p>
                             </div>
                             <div className="w-full h-2 mb-4 bg-orange-100 rounded-full">
@@ -116,7 +120,7 @@ const Infoall = ({ data }: any) => {
                                     Nivel de 80cm a 109cm
                                 </p>
                                 <p>
-                                {`${isVermelho / isTotalDispositivo * 100 + "%"}`}
+                                {`${formatNumber(isVermelho / isTotalDispositivo * 100) + "%"}`}
                                 </p>
                             </div>
                             <div className="w-full h-2 mb-4 bg-red-100 rounded-full">
@@ -128,7 +132,7 @@ const Infoall = ({ data }: any) => {
                                     Acima de 110cm
                                 </p>
                                 <p>
-                                {`${isRoxo / isTotalDispositivo * 100 + "%"}`}
+                                {`${formatNumber(isRoxo / isTotalDispositivo * 100 ) + "%"}`}
                                 </p>
                             </div>
                             <div className="w-full h-2 bg-purple-100 rounded-full">
