@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes water-animation {
+    0% {
+      transform: translate(0, -10px);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translate(0, 10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, -10px);
+      opacity: 0.4;
+    }
+  }
+  
+  .animate-water {
+    animation: water-animation 3s infinite;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10px;
+  }
