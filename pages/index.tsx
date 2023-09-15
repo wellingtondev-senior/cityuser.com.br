@@ -16,7 +16,7 @@ export default function Home() {
 
   const [isEventData, setIsEventData] = useState<[]>([]);
   const useAlertFormState = useAlertForm((state: any) => state);
-  const url = process.env.NEXT_PUBLIC_URLAPI ? process.env.NEXT_PUBLIC_URLAPI : '';
+  const url = process.env.NEXT_PUBLIC_URLAPI ? process.env.NEXT_PUBLIC_URLAPI :  '';
 
   async function getDispositivos(){
    try {
