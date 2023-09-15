@@ -25,7 +25,7 @@ export default function Home() {
    } catch (error:any) {
     
       const ob = error.toJSON();
-      if (ob.status == 403) {
+      if (ob.status ==  403) {
         useAlertFormState.actionOpen("ERROR: session expired", "#DB2777");
       } else if (ob.config.timeout >= 8000) {
         useAlertFormState.actionOpen("ERROR: Estamos trabalhando para melhorias, tente novamente em alguns instantes", "#DB2777");
